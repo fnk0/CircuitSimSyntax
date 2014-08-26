@@ -1,0 +1,43 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: CircuitSim
+scopeName: source.circuit_sim
+fileTypes: ["cs"]
+uuid: e2d64bf1-84e4-4029-b11c-647468068da2
+
+patterns: 
+
+## Matches all the kewyords
+- match: \b(inputNames|outputNames|circuit|outputs|truthTable|propagationDelay|circuitInputs|testCase)\b
+  name: support.class.circuit_sim
+
+## Matches common filenames that might be declared by the user
+- match: \b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH)\b
+  name: keyword.control.circuit_sim
+
+## Matches common punction
+- match: (\^|\&|\~)
+  name: constant.language.circuit_sim
+
+## Matches the = sign and commas
+- match: (\=|\,)
+  name: keyword.control.circuit_sim
+
+## Matches brackets and parenthesis and square brackets
+- match: (\(|\)|\{|\}|\[|\])
+  name: string.single.circuit_sim
+
+# main scope
+- include: '#comment'
+
+#################################
+
+repository:
+
+# control sequences
+  comment:
+    match: (?:^ *|\G *)((#).*)
+    captures:
+      '1': {name: comment.line.number-sign.circuit_sim}
+      '2': {name: punctuation.definition.comment.line.circuit_sim}
+...
