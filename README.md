@@ -9,7 +9,7 @@ CircuitSim is a java program to simulate circuits at gate level writen by Dr. Da
 Create a folder inside the packages folder with the desired name for the syntas such as CircuitSim
 Download the .tmLanguage file and place inside the created folder.
 
-To enable the Syntax Highlight feature save a file as .cs or inside subline go to View -> Syntax -> CircuitSim
+To enable the Syntax Highlight feature save a file as ````.csim```` or inside subline go to View -> Syntax -> CircuitSim
 
 ###### Auto Complete
 
