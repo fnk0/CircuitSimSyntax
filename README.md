@@ -11,5 +11,12 @@ Download the .tmLanguage file and place inside the created folder.
 
 To enable the Syntax Highlight feature save a file as .cs or inside subline go to View -> Syntax -> CircuitSim
 
+###### Auto Complete
+
+I've also added some auto complete feature for the keywords. The auto complete is accomplished by pressing TAB 
+Ex: if you type "in" and press TAB would generate inputNames { }
+
+To use the auto complete feature place the file CircuitSimCompletions.sublime-completions inside the root of the packages folder. 
+
 Enjoy :)
 
