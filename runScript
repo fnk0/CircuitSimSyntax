@@ -1,8 +1,12 @@
 #!/bin/bash
+# Author: Marcus Gabilheri
+# Check out the readme on github at https://github.com/fnk0/CircuitSimSyntax
 # This script runs the generates a .txt file from all .csim files and executes
 # the CircuitSim program with that as an output.
 
 mkdir -p "`pwd`/out"
+
+ext=.csim
 
 if [ ! -f "`pwd`/out/CircuitSim.jar" ]
 	then
@@ -10,9 +14,13 @@ if [ ! -f "`pwd`/out/CircuitSim.jar" ]
 		cp CircuitSim.jar "`pwd`/out/"CircuitSim.jar
 fi
 
-if [ $1 == "-cp" ]
+if [[ $1 == "" ]]
 	then
-	echo "Convertint files from .csim to .txt ..."
+	echo "Usage: runScript FILE"
+	echo "Usage: runScript FILE args"
+	echo "Usage: runScript -cp FILES || *"
+elif [[ $1 == "-cp" ]]; then
+	echo "Converting files from .csim to .txt ..."
 	echo -------------------------------------
 	echo 
 fi
@@ -24,14 +32,10 @@ do
 
 		if [ ! $var == "-cp" ]
 			then
-			echo "Copying file: $var"
+			file=$(echo $var | sed -e 's/\(.csim\)*$//g')
+			echo "Copying file: $file$ext"
 
-			if [[ ! $var = [csim]* ]]
-				then
-				cp "$var" "`pwd`/out/""$var".txt
-			else
-				cp "$var".csim "`pwd`/out/""$var".txt
-			fi
+			cp $file$ext "`pwd`/out/$var".txt
 		fi
 	fi
 done
