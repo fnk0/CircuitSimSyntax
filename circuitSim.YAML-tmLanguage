@@ -1,4 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
+# Author: Marcus Gabilheri
+# Since: 08/26/2014
 ---
 name: CircuitSim
 scopeName: source.circuit_sim
