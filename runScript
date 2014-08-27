@@ -1,0 +1,29 @@
+#!/bin/bash
+# This script runs the generates a .txt file from all .csim files and executes
+# the CircuitSim program with that as an output.
+
+mkdir -p "`pwd`/out"
+
+if [ ! -f "`pwd`/out/CircuitSim.jar" ]
+	then
+		echo "Copying Circuit Sim to the output folder"
+		cp CircuitSim.jar "`pwd`/out/"CircuitSim.jar
+fi
+
+for var in "$@"
+do
+	if [[ ! $var = [0-9]* ]]
+		then
+		echo "Copying file: $var"
+		cp "$var".csim "`pwd`/out/""$var".txt
+	fi
+done
+
+echo
+echo Running CircuitSim with $@
+echo -------------------------------------
+echo 
+
+cd "`pwd`/out/"
+
+java -jar CircuitSim.jar $@

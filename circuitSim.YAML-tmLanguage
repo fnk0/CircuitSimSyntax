@@ -2,7 +2,7 @@
 ---
 name: CircuitSim
 scopeName: source.circuit_sim
-fileTypes: ["cs"]
+fileTypes: ["csim"]
 uuid: e2d64bf1-84e4-4029-b11c-647468068da2
 
 patterns: 
