@@ -48,7 +48,8 @@ if [ ! $1 == "-cp" ]
 	echo 
 
 	cd "`pwd`/out/"
-	java -jar CircuitSim.jar $(echo $@ | sed -e 's/\(.csim\)*$//g')
+	java -jar CircuitSim.jar $(echo $@ | sed -e 's/\(.csim\)*$//g') > OUTPUT.txt
+	cat OUTPUT.txt
 fi
 
 echo 
