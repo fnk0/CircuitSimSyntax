@@ -22,7 +22,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR)\b</string>
+			<string>(\b(AND|XOR|OR|NAND|HALF-ADDER|ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR|FullAdder|HalfAdder|DECODER|MUX|ALU|SELECT|T_SELECT|SHIT_CONTROL_SELECT|ShiftControlSelect|ShiftLeft|SHIFT_LEFT|ShiftRight|SHIFT_RIGHT|OUTPUT_SELECT|OutputSelect)([0-9]+)\b)</string>
+			<key>name</key>
+			<string>keyword.control.circuit_sim</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\b(AND|XOR|OR|NAND|HALF-ADDER|ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR|FullAdder|HalfAdder|DECODER|MUX|ALU|SELECT|T_SELECT|SHIT_CONTROL_SELECT|ShiftControlSelect|ShiftLeft|SHIFT_LEFT|ShiftRight|SHIFT_RIGHT|OUTPUT_SELECT|OutputSelect)\b)</string>
 			<key>name</key>
 			<string>keyword.control.circuit_sim</string>
 		</dict>
