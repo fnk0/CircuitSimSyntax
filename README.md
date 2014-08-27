@@ -56,5 +56,11 @@ Alternativally the runScript can be used with the argument ``` -cp ``` to only c
 
 ``` runScript -cp * ```
 
+####### Running runScript from anywhere
+
+UNIX: copy the runscript to the /usr/bin folder --> sudo cp runScript /usr/bin 
+
+Windows: Add the runScript to your PATH variable. 
+
 Enjoy :)
 
