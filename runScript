@@ -35,7 +35,7 @@ do
 			file=$(echo $var | sed -e 's/\(.csim\)*$//g')
 			echo "Copying file: $file$ext"
 
-			cp $file$ext "`pwd`/out/$var".txt
+			cp $file$ext "`pwd`/out/$file".txt
 		fi
 	fi
 done
