@@ -33,7 +33,7 @@ do
 		if [ ! $var == "-cp" ]
 			then
 			file=$(echo $var | sed -e 's/\(.csim\)*$//g')
-			echo "Copying file: $file$ext"
+			echo "Copying file: $file"
 
 			cp $file$ext "`pwd`/out/$file".txt
 		fi
@@ -48,7 +48,7 @@ if [ ! $1 == "-cp" ]
 	echo 
 
 	cd "`pwd`/out/"
-	java -jar CircuitSim.jar $@
+	java -jar CircuitSim.jar $(echo $@ | sed -e 's/\(.csim\)*$//g')
 fi
 
 echo 
