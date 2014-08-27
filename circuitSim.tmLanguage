@@ -28,19 +28,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>($([A-Za-z][A-Za-z0-9_]+))</string>
-			<key>name</key>
-			<string>keyword.control.circuit_sim</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(\^|\&amp;|\~)</string>
+			<string>(\^|\&amp;|\~|\||\!)</string>
 			<key>name</key>
 			<string>constant.language.circuit_sim</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\=|\,)</string>
+			<string>(\=|\,|\:|\.)</string>
 			<key>name</key>
 			<string>keyword.control.circuit_sim</string>
 		</dict>

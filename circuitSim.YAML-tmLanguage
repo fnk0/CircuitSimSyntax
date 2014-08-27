@@ -17,15 +17,12 @@ patterns:
 - match: \b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR)\b
   name: keyword.control.circuit_sim
 
-- match: ($([A-Za-z][A-Za-z0-9_]+))
-  name: keyword.control.circuit_sim
-
 ## Matches common punction
-- match: (\^|\&|\~)
+- match: (\^|\&|\~|\||\!)
   name: constant.language.circuit_sim
 
 ## Matches the = sign and commas
-- match: (\=|\,)
+- match: (\=|\,|\:|\.)
   name: keyword.control.circuit_sim
 
 ## Matches brackets and parenthesis and square brackets

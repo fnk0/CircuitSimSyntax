@@ -1,0 +1,15 @@
+{
+        "scope": "source.circuit_sim",
+
+        "completions":
+        [
+                { "trigger": "inp", "contents": "inputNames { $0 }" },
+                { "trigger": "out", "contents": "outputNames { $0 }" },
+                { "trigger": "prop", "contents": "propagationDelay { $0 }" },
+                { "trigger": "tru", "contents": "truthTable { \n\t$0\n} " },
+                {"trigger": "ou", "contents": "outputs { $0 }" },
+                { "trigger": "ci", "contents": "circuit ${1:circtuitFileName} ${2:circtuitName} { $0 }" },
+                { "trigger": "cir", "contents": "circuitInputs { $0 }" },
+                { "trigger": "tes", "contents": "testCase { $0 }" }
+        ]
+}
