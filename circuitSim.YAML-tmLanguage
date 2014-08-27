@@ -7,12 +7,17 @@ uuid: e2d64bf1-84e4-4029-b11c-647468068da2
 
 patterns: 
 
+- include: '#comment'
+
 ## Matches all the kewyords
 - match: \b(inputNames|outputNames|circuit|outputs|truthTable|propagationDelay|circuitInputs|testCase)\b
   name: support.class.circuit_sim
 
 ## Matches common filenames that might be declared by the user
-- match: \b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH)\b
+- match: \b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR)\b
+  name: keyword.control.circuit_sim
+
+- match: ($([A-Za-z][A-Za-z0-9_]+))
   name: keyword.control.circuit_sim
 
 ## Matches common punction
@@ -28,7 +33,7 @@ patterns:
   name: string.single.circuit_sim
 
 # main scope
-- include: '#comment'
+- include: '#comment' 
 
 #################################
 
@@ -36,8 +41,7 @@ repository:
 
 # control sequences
   comment:
-    match: (?:^ *|\G *)((#).*)
+    match: ((#).*)
     captures:
       '1': {name: comment.line.number-sign.circuit_sim}
-      '2': {name: punctuation.definition.comment.line.circuit_sim}
 ...

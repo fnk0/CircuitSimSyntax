@@ -11,6 +11,10 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>include</key>
+			<string>#comment</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\b(inputNames|outputNames|circuit|outputs|truthTable|propagationDelay|circuitInputs|testCase)\b</string>
 			<key>name</key>
@@ -18,7 +22,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH)\b</string>
+			<string>\b(AND|XOR|OR|NAND|HALF-ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR)\b</string>
+			<key>name</key>
+			<string>keyword.control.circuit_sim</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>($([A-Za-z][A-Za-z0-9_]+))</string>
 			<key>name</key>
 			<string>keyword.control.circuit_sim</string>
 		</dict>
@@ -41,12 +51,6 @@
 			<string>string.single.circuit_sim</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>(^[-{}]([\d,.]+).*$)</string>
-			<key>name</key>
-			<string>keyword.control.circuit_sim</string>
-		</dict>
-		<dict>
 			<key>include</key>
 			<string>#comment</string>
 		</dict>
@@ -62,14 +66,9 @@
 					<key>name</key>
 					<string>comment.line.number-sign.circuit_sim</string>
 				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.line.circuit_sim</string>
-				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?:^ *|\G *)((#).*)</string>
+			<string>((#).*)</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>
