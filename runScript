@@ -10,20 +10,41 @@ if [ ! -f "`pwd`/out/CircuitSim.jar" ]
 		cp CircuitSim.jar "`pwd`/out/"CircuitSim.jar
 fi
 
+if [ $1 == "-cp" ]
+	then
+	echo "Convertint files from .csim to .txt ..."
+	echo -------------------------------------
+	echo 
+fi
+
 for var in "$@"
 do
-	if [[ ! $var = [0-9]* ]]
+	if [[ ! $var = [0-9]* ]] && [[ ! $var == "runScript" ]] && [[ ! $var == "CircuitSim.jar" ]] && [[ ! -d $var ]]
 		then
-		echo "Copying file: $var"
-		cp "$var".csim "`pwd`/out/""$var".txt
+
+		if [ ! $var == "-cp" ]
+			then
+			echo "Copying file: $var"
+
+			if [[ ! $var = [csim]* ]]
+				then
+				cp "$var" "`pwd`/out/""$var".txt
+			else
+				cp "$var".csim "`pwd`/out/""$var".txt
+			fi
+		fi
 	fi
 done
 
-echo
-echo Running CircuitSim with $@
-echo -------------------------------------
+if [ ! $1 == "-cp" ]
+	then
+	echo
+	echo Running CircuitSim with $@
+	echo -------------------------------------
+	echo 
+
+	cd "`pwd`/out/"
+	java -jar CircuitSim.jar $@
+fi
+
 echo 
-
-cd "`pwd`/out/"
-
-java -jar CircuitSim.jar $@
