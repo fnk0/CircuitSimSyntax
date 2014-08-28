@@ -62,5 +62,70 @@ UNIX: copy the runscript to the /usr/bin folder --> sudo cp runScript /usr/bin
 
 Windows: Add the runScript to your PATH variable. 
 
+
+#### Circtuit Sim Syntax Specs
+###### Keywords
+````
+  inputNames
+  outputNames
+  circuit
+  outputs
+  truthTable
+  propagationDelay
+  circuitInputs
+  testCase
+````
+###### Convention / Common File names to be used
+````
+  AND
+  NAND*
+  XOR
+  OR
+  NOT
+  NOR
+  HALF-ADDER or HalfAdder
+  ADDER or Adder
+  FULL-ADDER or FullAdder
+  SELECTOR
+  MULTIPLEXOR
+  PASSTHROUGH
+  WIRE
+  DECODER
+  MUX
+  ALU
+  SEKECT
+  T_SELECT
+  SHIFT_CONTROL_SELECT or ShiftControlSelect
+  SHIFT_LEFT or ShiftLeft
+  SHIFT_RIGHT or ShiftRight
+  OUTPUT_SELECT or OutputSelect
+  MAJORITY
+  MINORITY
+  CARRY-SELECT-ADDER or CarrySelectAdder
+  
+````
+###### Common Punctuation
+  1. Boolean Control
+````
+    ^
+    ~
+    &
+    |
+    !
+````
+  2. Structure Control
+````
+    {}
+    []
+    ()
+````
+  3. Other Punctuation
+````
+    =
+    ,
+    :
+    .
+````
+
 Enjoy :)
 
