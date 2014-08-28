@@ -105,7 +105,7 @@ Windows: Add the runScript to your PATH variable.
   
 ````
 ###### Common Punctuation
-  1. Boolean Control
+  * Boolean Control
 ````
     ^
     ~
@@ -113,13 +113,13 @@ Windows: Add the runScript to your PATH variable.
     |
     !
 ````
-  2. Structure Control
+  * Structure Control
 ````
     {}
     []
     ()
 ````
-  3. Other Punctuation
+  * Other Punctuation
 ````
     =
     ,
