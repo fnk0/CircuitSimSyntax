@@ -102,6 +102,7 @@ Windows: Add the runScript to your PATH variable.
   MAJORITY
   MINORITY
   CARRY-SELECT-ADDER or CarrySelectAdder
+  RIPPLE_CARRY_ADDER or RippleCarryAdder
   
 ````
 ###### Common Punctuation
