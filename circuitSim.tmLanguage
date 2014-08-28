@@ -22,13 +22,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\b(AND|XOR|OR|NAND|HALF-ADDER|ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR|FullAdder|HalfAdder|DECODER|MUX|ALU|SELECT|T_SELECT|SHIT_CONTROL_SELECT|ShiftControlSelect|ShiftLeft|SHIFT_LEFT|ShiftRight|SHIFT_RIGHT|OUTPUT_SELECT|OutputSelect|MAJORITY|MINORITY|CarrySelectAdder|CARRY-SELECT-ADDER|ALU)([0-9]+)\b)</string>
+			<string>(\b(AND|XOR|OR|NAND|HALF-ADDER|ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR|FullAdder|HalfAdder|DECODER|MUX|ALU|SELECT|T_SELECT|SHIT_CONTROL_SELECT|ShiftControlSelect|ShiftLeft|SHIFT_LEFT|ShiftRight|SHIFT_RIGHT|OUTPUT_SELECT|OutputSelect|MAJORITY|MINORITY|CarrySelectAdder|CARRY-SELECT-ADDER|RIPPLE_CARRY_ADDER|RippleCarryAdder)([0-9]+)\b)</string>
 			<key>name</key>
 			<string>keyword.control.circuit_sim</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\b(AND|XOR|OR|NAND|HALF-ADDER|ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR|FullAdder|HalfAdder|DECODER|MUX|ALU|SELECT|T_SELECT|SHIT_CONTROL_SELECT|ShiftControlSelect|ShiftLeft|SHIFT_LEFT|ShiftRight|SHIFT_RIGHT|OUTPUT_SELECT|OutputSelect|MAJORITY|MINORITY|CarrySelectAdder|CARRY-SELECT-ADDER|ALU)\b)</string>
+			<string>(\b(AND|XOR|OR|NAND|HALF-ADDER|ADDER|FULL-ADDER|SELECTOR|MULTIPLEXER|PASSTHROUGH|WIRE|NOT|NOR|FullAdder|HalfAdder|DECODER|MUX|ALU|SELECT|T_SELECT|SHIT_CONTROL_SELECT|ShiftControlSelect|ShiftLeft|SHIFT_LEFT|ShiftRight|SHIFT_RIGHT|OUTPUT_SELECT|OutputSelect|MAJORITY|MINORITY|CarrySelectAdder|CARRY-SELECT-ADDER|RIPPLE_CARRY_ADDER|RippleCarryAdder)\b)</string>
 			<key>name</key>
 			<string>keyword.control.circuit_sim</string>
 		</dict>
